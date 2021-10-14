@@ -1,6 +1,6 @@
 # Parfimerija
 A MERN e-commerce application, used to register and login user, create, update, delete, product. Order products, get an order history. Sort, filter, search and paginate products.
-Built with React, NodeJS, Express and MongoDB
+Built with React, NodeJS, Express and MongoDB. Frontend deployed on netlify, backend deployed on Heroku. https://parfimerija.netlify.app/
 
 ## Technologies
 
