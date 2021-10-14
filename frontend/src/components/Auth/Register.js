@@ -24,14 +24,14 @@ const Register = () => {
     return (
         <div className="login-page">
             <form onSubmit={(e) => handleRegister(e)}>
-                <h2>Register</h2>
+                <h2>Registrujte se</h2>
                 <input type="text" name="name" placeholder="Enter name" required onChange={handleChange} />
                 <input type="email" name="email" required placeholder="Email" onChange={handleChange} />
                 <input type="password" name="password" required placeholder="Password" onChange={handleChange} />
                 <input type="password" name="confirmPassword" required placeholder="Confirm Password" onChange={handleChange} />
                 <div className="row">
-                    <button type="submit">Register</button>
-                    <Link to="/login">Login</Link>
+                    <button type="submit">Registrujte se</button>
+                    <Link to="/login">Ulogujte se</Link>
                 </div>
             </form>
         </div>

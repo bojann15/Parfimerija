@@ -16,7 +16,7 @@ const OrderDetails = () => {
             <table>
                 <thead>
                     <tr>
-                        <th>Name</th>
+                        <th>Ime</th>
                         <th>Email</th>
 
                     </tr>
@@ -34,9 +34,9 @@ const OrderDetails = () => {
                 <thead>
                     <tr>
                         <th></th>
-                        <th>Products</th>
-                        <th>Quantity</th>
-                        <th>Price</th>
+                        <th>Proizvodi</th>
+                        <th>Količina</th>
+                        <th>Cena</th>
                     </tr>
                 </thead>
                 <tbody>

@@ -40,16 +40,16 @@ const Header = () => {
                 </h1>
             </div>
             <ul style={styleMenu}>
-                <li><Link to="/">{(user?.user?.role === 1) ? "Products" : "Shop"}</Link></li>
+                <li><Link to="/">{(user?.user?.role === 1) ? "Products" : "Prodavnica"}</Link></li>
                 {(user?.user?.role === 1) && (<>
                     <li><Link to="/create_product">Create Product</Link></li>
                     <li><Link to="/category">Categories</Link></li>
                 </>)}
                 {
                     (user) ? (<>
-                        <li><Link to="/history">History</Link></li>
-                        <li><Link to="/" onClick={logoutUser}>Logout</Link></li>
-                    </>) : <li><Link to="/login" >Login ✥ Register</Link></li>
+                        <li><Link to="/history">Istorija</Link></li>
+                        <li><Link to="/" onClick={logoutUser}>Izlogujte se</Link></li>
+                    </>) : <li><Link to="/login" >Ulogujte se</Link></li>
                 }
 
 

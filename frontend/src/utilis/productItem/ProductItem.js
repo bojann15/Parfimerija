@@ -8,7 +8,6 @@ const ProductItem = ({ product, handleDelete, handleCheck }) => {
     const { setCart, addCart } = useContext(GlobalContext);
 
     useEffect(() => {
-
         if (user) {
             const fetchData = async () => {
                 try {
@@ -18,13 +17,12 @@ const ProductItem = ({ product, handleDelete, handleCheck }) => {
                     setCart(response.data.cart);
 
                 } catch (err) {
-                    console.error(err)
+                    console.error(err);
                 }
             }
-            fetchData()
+            fetchData();
         }
     }, [user]);
-
 
     return (
         <div className="product_card">
@@ -35,15 +33,15 @@ const ProductItem = ({ product, handleDelete, handleCheck }) => {
             <img src={product.selectedFile || 'https://mpng.subpng.com/20180804/qhp/kisspng-blog-computer-icons-vector-graphics-favicon-clip-a-5b661b473a7649.4698522215334183112395.jpg'} alt="" />
             <div className="product_box">
                 <h2 title={product.title}>{product.title}</h2>
-                <span>€{product.price}</span>
+                <span>{product.price} RSD</span>
                 <p>{product.description}</p>
             </div>
             {user?.user?.role !== 1 ? (<div className="row_btn">
                 <Link id="btn_buy" to="#!" onClick={() => addCart(product)}>
-                    Buy
+                    Kupi
                 </Link>
                 <Link id="btn_view" to={`product/${product._id}`}>
-                    View
+                    Opis
                 </Link>
             </div>) : (
                 <div className="row_btn">

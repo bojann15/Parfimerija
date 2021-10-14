@@ -65,9 +65,9 @@ const Products = () => {
         <>
             <div className="filter_menu">
                 <div className="row" >
-                    <span>Filters:</span>
+                    <span>Kategorije:</span>
                     <select name="category" value={category} onChange={handleCategory}>
-                        <option value=''>All Products</option>
+                        <option value=''>Svi proizvodi</option>
                         {
                             categories.map((category) => (
                                 <option value={"category=" + category.name} key={category._id}>
@@ -77,15 +77,15 @@ const Products = () => {
                         }
                     </select>
                 </div>
-                <input type="text" value={search} placeholder="Search" onChange={(e) => setSearch(e.target.value.toLowerCase())} />
+                <input type="text" value={search} placeholder="Pretrazi" onChange={(e) => setSearch(e.target.value.toLowerCase())} />
                 <div className="row sort">
-                    <span>Sort By:</span>
+                    <span>Sortiraj:</span>
                     <select value={sort} onChange={(e) => setSort(e.target.value)}>
-                        <option value=''>Newest</option>
-                        <option value='sort=oldest'>Oldest</option>
-                        <option value='sort=-sold'>Best sales</option>
-                        <option value='sort=-price'>Price: Highest-Low</option>
-                        <option value='sort=price'>Price: Low-High</option>
+                        <option value=''>Najnoviji</option>
+                        <option value='sort=oldest'>Najstariji</option>
+                        <option value='sort=-sold'>Najprodavaniji</option>
+                        <option value='sort=-price'>Cena: Najviša-Najniža</option>
+                        <option value='sort=price'>Cena: Najniža-Najviša</option>
                     </select>
                 </div>
             </div >
@@ -105,7 +105,7 @@ const Products = () => {
             </div>
             <div className="load_more">
                 {
-                    result < page * 9 ? "" : <button onClick={() => setPage(page + 1)}>Load more</button>
+                    result < page * 9 ? "" : <button onClick={() => setPage(page + 1)}>Prikaži više</button>
                 }
             </div>
             {products.length === 0 && <Loading />}

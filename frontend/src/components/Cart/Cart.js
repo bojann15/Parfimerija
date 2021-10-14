@@ -54,10 +54,10 @@ const Cart = () => {
         })
         setCart([]);
         addToCart([]);
-        alert("You have successfully placed an order.")
+        alert("Uspešno ste poručili.")
 
     }
-    if (cart.length === 0) return <h2 style={{ textAlign: "center", fontSize: "5rem" }}>Cart Empty</h2>
+    if (cart.length === 0) return <h2 style={{ textAlign: "center", fontSize: "5rem" }}>Prazna korpa</h2>
 
     return (
         <div>
@@ -68,7 +68,7 @@ const Cart = () => {
                             <img src={product.selectedFile || 'https://mpng.subpng.com/20180804/qhp/kisspng-blog-computer-icons-vector-graphics-favicon-clip-a-5b661b473a7649.4698522215334183112395.jpg'} alt="" />
                             <div className="box-detail">
                                 <h2>{product.title}</h2>
-                                <h3>${product.price * product.quantity}</h3>
+                                <h3>{product.price * product.quantity} RSD</h3>
                                 <p>{product.description}</p>
                                 <p>{product.content}</p>
                                 <div className="amount">
@@ -82,8 +82,8 @@ const Cart = () => {
                 })
             }
             <div className="total">
-                <h3>Total: ${total}</h3>
-                <button id="btn_payment" onClick={() => tranSuccess()}>Order</button>
+                <h3>Total: {total} RSD</h3>
+                <button id="btn_payment" onClick={() => tranSuccess()}>Poruči</button>
             </div>
         </div>
 
